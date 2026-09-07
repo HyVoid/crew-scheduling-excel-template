@@ -8,9 +8,9 @@ Looking for a reliable **painting contractor capacity planning template**? This 
 
 > No signup. No installation. Free browser access. Excel is available for teams that need an offline working file, permanent records, audit trails, and repeated operational use.
 >
-> [🌐 Try the Free Live Capacity Planner (No-Install Browser App)](#)
+> [🌐 Try the Free Live Capacity Planner (No-Install Browser App)](https://hyvoid.github.io/crew-scheduling-excel-template/)
 >
-> [📥 Download the Reusable Excel Crew Scheduling Template (Persistent Offline File)](#)
+> [📥 Download the Reusable Excel Crew Scheduling Template (Persistent Offline File)](coming soon)
 
 
 ## Pain Points Solved: What This Resource Allocation Tool Fixes
