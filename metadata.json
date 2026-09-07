@@ -1,0 +1,6 @@
+{
+  "name": "Painter Crew Capacity & Schedule Management System",
+  "description": "A comprehensive 12-month dynamic painter crew capacity planning, scheduling, and staffing decision SaaS application with full client-side calculations and persistence.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

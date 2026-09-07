@@ -1,0 +1,40 @@
+name: Deploy to GitHub Pages (gh-pages branch)
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          # Disabled npm Cache Setup: Removed the cache to prevent failure when lockfile is absent
+          # (Avoids: Dependencies lock file is not found in /home/runner/work/)
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build Production Assets
+        # Vite base is configured as './' in vite.config.ts for relative path resolution
+        run: npm run build
+
+      - name: Deploy to gh-pages Branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: gh-pages
