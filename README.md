@@ -10,7 +10,7 @@ Looking for a reliable **painting contractor capacity planning template**? This 
 >
 > [🌐 Try the Free Live Capacity Planner (No-Install Browser App)](https://hyvoid.github.io/crew-scheduling-excel-template/)
 >
-> [📥 Download the Reusable Excel Crew Scheduling Template (Persistent Offline File)](coming soon)
+> [📥 Download the Reusable Excel Crew Scheduling Template (Persistent Offline File)](https://alexhasgreatestuff.gumroad.com/l/kdeki)
 
 
 ## Pain Points Solved: What This Resource Allocation Tool Fixes
@@ -43,7 +43,7 @@ The planning engine automatically translates your project schedule into weekly c
 
 ### 4. Refresh, React, and Standardize
 Painting schedules rarely remain static due to weather, site conditions, and client delays. As conditions change, update the job dates. The capacity view instantly recalculates without requiring you to rebuild a static Gantt chart.
-*Ready to implement this permanently?* Once you've validated your scheduling workflow in the browser, **[📥 Download the Excel Crew Scheduling Template]** to maintain persistent operational records, share audit trails with your team, and establish a repeatable workforce management standard.
+*Ready to implement this permanently?* Once you've validated your scheduling workflow in the browser, **[📥 Download the Excel Crew Scheduling Template](https://alexhasgreatestuff.gumroad.com/l/kdeki)** to maintain persistent operational records, share audit trails with your team, and establish a repeatable workforce management standard.
 
 ## Why I Built This Field Service Manpower Tool
 The core operational problem for field service businesses is not the absence of a Gantt chart. 
