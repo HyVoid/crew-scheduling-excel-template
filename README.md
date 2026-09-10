@@ -10,16 +10,18 @@ Looking for a reliable **painting contractor capacity planning template**? This 
 >
 > [🌐 Try the Free Live Capacity Planner (No-Install Browser App)](https://hyvoid.github.io/crew-scheduling-excel-template/)
 >
-> [📥 Download the Reusable Excel Crew Scheduling Template (Persistent Offline File)](https://alexhasgreatestuff.gumroad.com/l/kdeki)
+> [📥 Download the Reusable Excel Crew Scheduling Template (Persistent Offline File)](https://theseusworkshop.com/l/kdeki?utm_source=github&utm_medium=GitHub%20README)
 
 
 ## Pain Points Solved: What This Resource Allocation Tool Fixes
-*   **Pain Point: Blindly accepting jobs.** *Solution:* See exactly where your 11-person crew is approaching full capacity—week by week across the next 12 months.
-*   **Pain Point: Wasted idle time.** *Solution:* Identify which weeks have usable spare capacity, making empty production time visible to sales and dispatching teams.
-*   **Pain Point: Unexpected labor shortages.** *Solution:* Spot which weeks are already overloaded *before* another project is committed to the same period.
-*   **Pain Point: Vague hiring signals.** *Solution:* Quantify exactly how many painters are missing during an overload, replacing "gut feelings" with data-driven staffing decisions.
-*   **Pain Point: Complex schedule conflict resolution.** *Solution:* Pinpoint which specific projects overlap during a capacity conflict, allowing you to evaluate schedule shifts or subcontractor hiring against actual workload.
-*   **Pain Point: Reactive workforce management.** *Solution:* Discover where the next capacity problem occurs early, giving management a wider action window for hiring or resource leveling.
+| Pain Point | Solution |
+| :--- | :--- |
+| **Blindly accepting jobs** | See exactly where your 11-person crew is approaching full capacity—week by week across the next 12 months. |
+| **Wasted idle time** | Identify which weeks have usable spare capacity, making empty production time visible to sales and dispatching teams. |
+| **Unexpected labor shortages** | Spot which weeks are already overloaded *before* another project is committed to the same period. |
+| **Vague hiring signals** | Quantify exactly how many painters are missing during an overload, replacing "gut feelings" with data-driven staffing decisions. |
+| **Complex schedule conflict resolution** | Pinpoint which specific projects overlap during a capacity conflict, allowing you to evaluate schedule shifts or subcontractor hiring against actual workload. |
+| **Reactive workforce management** | Discover where the next capacity problem occurs early, giving management a wider action window for hiring or resource leveling. |
 
 ## Quick Start Workflow: How to Optimize Your Crew Schedule
 Follow this step-by-step tutorial to generate your first capacity forecast.
@@ -43,7 +45,7 @@ The planning engine automatically translates your project schedule into weekly c
 
 ### 4. Refresh, React, and Standardize
 Painting schedules rarely remain static due to weather, site conditions, and client delays. As conditions change, update the job dates. The capacity view instantly recalculates without requiring you to rebuild a static Gantt chart.
-*Ready to implement this permanently?* Once you've validated your scheduling workflow in the browser, **[📥 Download the Excel Crew Scheduling Template](https://alexhasgreatestuff.gumroad.com/l/kdeki)** to maintain persistent operational records, share audit trails with your team, and establish a repeatable workforce management standard.
+*Ready to implement this permanently?* Once you've validated your scheduling workflow in the browser, **[📥 Download the Excel Crew Scheduling Template](https://theseusworkshop.com/l/kdeki?utm_source=github&utm_medium=GitHub%20README)** to maintain persistent operational records, share audit trails with your team, and establish a repeatable workforce management standard.
 
 ## Why I Built This Field Service Manpower Tool
 The core operational problem for field service businesses is not the absence of a Gantt chart. 
