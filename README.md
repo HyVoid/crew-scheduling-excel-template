@@ -1,3 +1,5 @@
+[ 🌐 عربي ](README.ar.md) | [ 🇪🇸 Español ](README.sp.md) | [ 🇬🇧 English ](README.md)
+
 # Painting Contractor Capacity Planning Template: 12-Month Crew Scheduling & Staffing Decision System
 
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
