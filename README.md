@@ -45,7 +45,8 @@ Feed your active and planned painting jobs into the **operational input layer**.
 The planning engine automatically translates your project schedule into weekly crew demand. Review the dashboard for three critical operational signals:
 *   **OPEN** — Usable spare capacity exists.
 *   **FULL** — The team is hitting maximum workforce utilization.
-*   **OVERLOAD** — Scheduled demand exceeds your available crew (staffing shortage detected).
+*   **OVERLOAD** — Scheduled demand exceeds your available crew (staffing shortage detected).<img width="1920" height="790" alt="image" src="https://github.com/user-attachments/assets/609c3417-b29a-472c-a5e8-7a801251bf09" />
+
 
 ### 4. Refresh, React, and Standardize
 Painting schedules rarely remain static due to weather, site conditions, and client delays. As conditions change, update the job dates. The capacity view instantly recalculates without requiring you to rebuild a static Gantt chart.
