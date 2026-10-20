@@ -1,6 +1,7 @@
-[ 🌐 عربي ](README.ar.md) | [ 🇳🇱 Nederlands ](README.nl.md) | [ 🇪🇸 Español ](README.sp.md) | [ 🇬🇧 English ](README.md)
+[ 🌐 عربي ](README.ar.md) | [ 🇩🇪 Deutsch ](README.de.md) | [ 🇫🇷 Français ](README.fr.md) | [ 🇳🇱 Nederlands ](README.nl.md) | [ 🇪🇸 Español ](README.sp.md) | [ 🇬🇧 English ](README.md)
 
 # Sjabloon voor capaciteitsplanning van schildersbedrijven: beslissingssysteem voor ploegplanning en personeelsbezetting over 12 maanden
+<img width="1920" height="790" alt="image" src="https://github.com/user-attachments/assets/b504a48e-c91c-415a-ad08-fa799e4eb19e" />
 
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/Platform-Browser%20%2B%20Excel-green.svg)](#)
@@ -43,7 +44,7 @@ Voer uw actieve en geplande schilderopdrachten in de **operationele invoerlaag**
 De planningsengine zet uw projectschema automatisch om in de wekelijkse ploegvraag. Bekijk het dashboard voor drie kritieke operationele signalen:
 *   **OPEN** — er is bruikbare vrije capaciteit.
 *   **FULL** — het team bereikt de maximale inzet van het personeel.
-*   **OVERLOAD** — de geplande vraag overschrijdt uw beschikbare ploeg (personeelstekort vastgesteld).
+*   **OVERLOAD** — de geplande vraag overschrijdt uw beschikbare ploeg (personeelstekort vastgesteld).<img width="1920" height="790" alt="image" src="https://github.com/user-attachments/assets/609c3417-b29a-472c-a5e8-7a801251bf09" />
 
 ### 4. Verversen, reageren en standaardiseren
 Schildersschema's blijven zelden statisch door weer, terreinomstandigheden en vertragingen bij de klant. Werk de opdrachtdatums bij wanneer omstandigheden veranderen. De capaciteitsweergave wordt direct herberekend, zonder dat u een statische Gantt-grafiek hoeft opnieuw op te bouwen.
