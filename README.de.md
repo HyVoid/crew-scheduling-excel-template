@@ -109,31 +109,31 @@ Die Arbeitsmappe verwendet eine bewusst kleine Architektur: **vier funktionale S
 ```text
 00_SETUP
     │
-    │ Globale Parameter
+    │ Global parameters
     ▼
 01_JOBS
     │
-    │ Strukturierte Auftragsdaten
+    │ Structured job data
     ▼
 02_RESOURCE_PLAN
     │
     ├──────────────► 03_12M_TIMELINE
-    │                 Terminplanungs-/Gantt-Ansicht
+    │                 Scheduling / Gantt view
     │
     └──────────────► 04_DASHBOARD
-                      Management-Entscheidungsansicht
+                      Management decision view
 ```
 
 Die Abhängigkeitsrichtung ist absichtlich einseitig:
 
 ```text
-Steuerungsparameter
+Control Parameters
        ↓
-Operative Eingaben
+Operational Inputs
        ↓
-Berechnungs-Engine
+Calculation Engine
        ↓
-Zeitachse / Dashboard
+Timeline / Dashboard
 ```
 
 Es ist nicht erforderlich, dass der Anwender berechnete Werte manuell zwischen Arbeitsblättern kopiert.
@@ -215,19 +215,19 @@ Zentrale Eingabefelder:
 Berechnete Felder umfassen:
 
 ```text
-Kalendertage
-Arbeitstage
-Gesamte Personentage
-In Plan einbeziehen
+Calendar Days
+Work Days
+Total Man-Days
+Include in Plan
 ```
 
 Die Trennung von Eingabe und Ausgabe ist absichtlich.
 
 ```text
-Manuelle Eingabe
+Manual Input
 A:G
     ↓
-Automatische Analyse
+Automatic Analysis
 H:K
 ```
 
@@ -242,27 +242,27 @@ Für einen Standardhorizont von 12 Monaten ergibt dies etwa **52–53 Wochenperi
 Jede Woche enthält:
 
 ```text
-Wochenindex
-Wochenstart
-Wochenende
-Monat
-Aktive Aufträge
-Zugewiesenes Team
-Verfügbare Kapazität
-Netto-Kapazitätslücke
-Auslastung
-Kapazitätsstatus
-Personalengpass
+Week Index
+Week Start
+Week End
+Month
+Active Jobs
+Allocated Crew
+Available Capacity
+Net Capacity Gap
+Utilization
+Capacity Status
+Staffing Shortage
 ```
 
 Die zentrale Wochenentscheidungsstruktur ist:
 
 ```text
-                  Zugewiesenes Team
+                  Allocated Crew
                          │
                          ▼
                 ┌─────────────────┐
-                │ Kapazitätsvergleich│
+                │ Capacity Compare│
                 └────────┬────────┘
                          │
           ┌──────────────┼──────────────┐
@@ -309,10 +309,10 @@ Eine Woche mit 4 + 5 + 3 Malern erfordert 12 Maler gegenüber einer Kapazität v
 Die Entscheidung wird explizit:
 
 ```text
-Bedarf      = 12 Maler
-Kapazität   = 11 Maler
-Engpass     = 1 Maler
-Auslastung  = 109,1 %
+Demand      = 12 painters
+Capacity    = 11 painters
+Shortage    = 1 painter
+Utilization = 109.1%
 Status      = OVERLOAD
 ```
 
@@ -324,17 +324,17 @@ Der Betrieb kann nun einen Auftrag mit niedrigerer Priorität verschieben oder e
 Die wöchentliche Überlappung basiert darauf, ob sich das Projektintervall mit dem Wochenintervall schneidet:
 
 ```text
-Auftragsstart ≤ Wochenende
-UND
-Auftragsende ≥ Wochenstart
+Job Start ≤ Week End
+AND
+Job End ≥ Week Start
 ```
 
 Das wöchentlich zugewiesene Team ist dann die Summe der Personalanforderungen für Aufträge, die diese Überlappungsbedingung erfüllen.
 
 ```text
-Zugewiesenes Team
+Allocated Crew
 =
-SUMME(Benötigte Maler × IstAktiv)
+SUM(Crew Required × IsActive)
 ```
 
 </details>
@@ -364,11 +364,11 @@ Warnstufen-Auslastung von tatsächlicher Kapazitätsüberschreitung trennen.
 **6. Korrigiertes Ergebnis**
 
 ```text
-Bedarf      = 11
-Kapazität   = 11
-Lücke       = 0
-Auslastung  = 100 %
-Engpass     = 0
+Demand      = 11
+Capacity    = 11
+Gap         = 0
+Utilization = 100%
+Shortage    = 0
 Status      = FULL
 ```
 
@@ -380,17 +380,17 @@ Die Unterscheidung ist wichtig, weil die angemessene Maßnahme darin bestehen ka
 <summary>Formellogik</summary>
 
 ```text
-Netto-Kapazitätslücke
+Net Capacity Gap
 =
-Verfügbare Kapazität - Zugewiesenes Team
+Available Capacity - Allocated Crew
 
-Auslastung
+Utilization
 =
-Zugewiesenes Team / Verfügbare Kapazität
+Allocated Crew / Available Capacity
 
-Personalengpass
+Staffing Shortage
 =
-MAX(0, Zugewiesenes Team - Verfügbare Kapazität)
+MAX(0, Allocated Crew - Available Capacity)
 ```
 
 Der Engpass bleibt null, wenn der Bedarf exakt der Kapazität entspricht.
@@ -424,13 +424,13 @@ Verfügbare Kapazität auf Wochenebene bewerten und mit den erforderlichen Maler
 Anstatt zu fragen:
 
 ```text
-"Haben wir diesen Monat freie Kapazität?"
+"Do we have spare capacity this month?"
 ```
 
 wird die betriebliche Frage:
 
 ```text
-"Welche konkreten Wochen können diesen Personalbedarf aufnehmen?"
+"Which specific weeks can absorb this crew requirement?"
 ```
 
 Diese Unterscheidung verwandelt ungenutzte Kapazität in eine Planungsgröße statt einer vagen Vertriebsannahme.
@@ -441,11 +441,11 @@ Diese Unterscheidung verwandelt ungenutzte Kapazität in eine Planungsgröße st
 Das Kapazitätssignal wird abgeleitet aus:
 
 ```text
-Verfügbare Kapazität
+Available Capacity
 -
-Zugewiesenes Team
+Allocated Crew
 =
-Netto-Kapazitätslücke
+Net Capacity Gap
 ```
 
 Positive Werte kennzeichnen verfügbare Teamkapazität.
@@ -485,17 +485,17 @@ Die Zeitachse zeigt außerdem, dass die Überlastung durch drei gleichzeitige Au
 Wenn J-26-003 über das Konfliktfenster 21.–27. September hinaus verschoben wird, sinkt der Bedarf von 12 auf 9 Maler:
 
 ```text
-Ursprünglich:
-4 + 5 + 3 = 12 Maler
-12 / 11 = 109,1 %
+Original:
+4 + 5 + 3 = 12 painters
+12 / 11 = 109.1%
 OVERLOAD
 ```
 
 Nach der Umplanung:
 
 ```text
-4 + 5 = 9 Maler
-9 / 11 = 81,8 %
+4 + 5 = 9 painters
+9 / 11 = 81.8%
 OPEN
 ```
 
@@ -543,7 +543,7 @@ Rechnet die Teamgröße und die üblichen Arbeitstage in eine wöchentliche Pers
 Für ein 11-köpfiges Malerteam an fünf Tagen:
 
 ```text
-11 × 5 = 55 Personentage/Woche
+11 × 5 = 55 man-days/week
 ```
 
 </details>
@@ -635,9 +635,9 @@ Erzeugt die inklusive Sonntagsgrenze für jede Planungswoche.
 #### Auftrags-/Wochen-Überlappungslogik
 
 ```text
-Auftragsstartdatum <= Wochenendedatum
-UND
-Auftragsendedatum >= Wochenstartdatum
+Job Start Date <= Week End Date
+AND
+Job End Date >= Week Start Date
 ```
 
 Zweck:
@@ -651,18 +651,18 @@ Dies vermeidet, sich allein auf das Startdatum des Auftrags zu stützen, und erf
 Konzeptionell:
 
 ```text
-Zugewiesenes Team
+Allocated Crew
 =
-SUMME der benötigten Maler
-für alle gültigen Aufträge, die die Woche überlappen
+SUM of Painters Required
+for all valid jobs overlapping the week
 ```
 
 #### Kapazitätslücke
 
 ```text
-Kapazitätslücke
+Capacity Gap
 =
-Verfügbare Kapazität - Zugewiesenes Team
+Available Capacity - Allocated Crew
 ```
 
 Positive Werte stellen ungenutzte Kapazität dar.
@@ -672,17 +672,17 @@ Negative Werte stellen einen Engpass dar.
 #### Auslastung
 
 ```text
-Auslastung
+Utilization
 =
-Zugewiesenes Team / Verfügbare Kapazität
+Allocated Crew / Available Capacity
 ```
 
 #### Personalengpass
 
 ```text
-Personalengpass
+Staffing Shortage
 =
-MAX(0, Zugewiesenes Team - Verfügbare Kapazität)
+MAX(0, Allocated Crew - Available Capacity)
 ```
 
 Dies verwandelt eine Überlastung in eine konkrete Personalmenge.
