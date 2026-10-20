@@ -1,6 +1,7 @@
-[ 🌐 عربي ](README.ar.md) | [ 🇳🇱 Nederlands ](README.nl.md) | [ 🇪🇸 Español ](README.sp.md) | [ 🇬🇧 English ](README.md)
+[ 🌐 عربي ](README.ar.md) | [ 🇩🇪 Deutsch ](README.de.md) | [ 🇫🇷 Français ](README.fr.md) | [ 🇳🇱 Nederlands ](README.nl.md) | [ 🇪🇸 Español ](README.sp.md) | [ 🇬🇧 English ](README.md)
 
 # قالب تخطيط سعة مقاول الدهانات: نظام جدولة طاقم العمل (crew) واتخاذ قرارات التوظيف على مدى 12 شهرًا
+<img width="1920" height="790" alt="image" src="https://github.com/user-attachments/assets/b504a48e-c91c-415a-ad08-fa799e4eb19e" />
 
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/Platform-Browser%20%2B%20Excel-green.svg)](#)
@@ -47,7 +48,7 @@
 يترجم محرّك التخطيط جدول مشاريعك تلقائيًا إلى طلب أسبوعي على طاقم العمل. راجع لوحة المعلومات لثلاث إشارات تشغيلية حرجة:
 *   **OPEN** — توجد سعة فائضة قابلة للاستخدام.
 *   **FULL** — يصل الفريق إلى أقصى استخدام للقوى العاملة.
-*   **OVERLOAD** — يتجاوز الطلب المجدول طاقمك المتاح (تم رصد نقص في التوظيف).
+*   **OVERLOAD** — يتجاوز الطلب المجدول طاقمك المتاح (تم رصد نقص في التوظيف).<img width="1920" height="790" alt="image" src="https://github.com/user-attachments/assets/609c3417-b29a-472c-a5e8-7a801251bf09" />
 
 ### 4. التحديث والتفاعل والتوحيد القياسي
 
