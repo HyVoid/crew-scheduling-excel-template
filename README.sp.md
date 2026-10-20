@@ -1,6 +1,7 @@
-[ 🌐 عربي ](README.ar.md) | [ 🇳🇱 Nederlands ](README.nl.md) | [ 🇪🇸 Español ](README.sp.md) | [ 🇬🇧 English ](README.md)
+[ 🌐 عربي ](README.ar.md) | [ 🇩🇪 Deutsch ](README.de.md) | [ 🇫🇷 Français ](README.fr.md) | [ 🇳🇱 Nederlands ](README.nl.md) | [ 🇪🇸 Español ](README.sp.md) | [ 🇬🇧 English ](README.md)
 
 # Plantilla de Planificación de Capacidad para Contratistas de Pintura: Sistema de Programación de Cuadrillas y Decisiones de Dotación de Personal a 12 Meses
+<img width="1920" height="790" alt="image" src="https://github.com/user-attachments/assets/b504a48e-c91c-415a-ad08-fa799e4eb19e" />
 
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/Platform-Browser%20%2B%20Excel-green.svg)](#)
@@ -48,7 +49,7 @@ Alimente sus trabajos de pintura activos y planificados en la **capa de entrada 
 El motor de planificación traduce automáticamente el programa de sus proyectos en demanda semanal de cuadrilla. Revise el panel para tres señales operativas críticas:
 *   **OPEN** — Existe capacidad disponible utilizable.
 *   **FULL** — El equipo alcanza la máxima utilización de la fuerza laboral.
-*   **OVERLOAD** — La demanda programada excede su cuadrilla disponible (se detecta escasez de dotación de personal).
+*   **OVERLOAD** — La demanda programada excede su cuadrilla disponible (se detecta escasez de dotación de personal).<img width="1920" height="790" alt="image" src="https://github.com/user-attachments/assets/609c3417-b29a-472c-a5e8-7a801251bf09" />
 
 ### 4. Actualice, Reaccione y Estandarice
 
