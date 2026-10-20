@@ -109,31 +109,31 @@ Le classeur utilise une architecture délibérément petite : **quatre couches f
 ```text
 00_SETUP
     │
-    │ Paramètres globaux
+    │ Global parameters
     ▼
 01_JOBS
     │
-    │ Données de chantier structurées
+    │ Structured job data
     ▼
 02_RESOURCE_PLAN
     │
     ├──────────────► 03_12M_TIMELINE
-    │                 Vue de planification / Gantt
+    │                 Scheduling / Gantt view
     │
     └──────────────► 04_DASHBOARD
-                      Vue de décision pour la direction
+                      Management decision view
 ```
 
 Le sens des dépendances est délibérément unidirectionnel :
 
 ```text
-Paramètres de contrôle
+Control Parameters
        ↓
-Entrées opérationnelles
+Operational Inputs
        ↓
-Moteur de calcul
+Calculation Engine
        ↓
-Chronologie / Tableau de bord
+Timeline / Dashboard
 ```
 
 L'utilisateur n'a pas besoin de copier manuellement des valeurs calculées entre les feuilles.
@@ -215,19 +215,19 @@ Champs d'entrée principaux :
 Les champs calculés comprennent :
 
 ```text
-Jours calendaires
-Jours ouvrables
-Total hommes-jours
-Inclure dans le plan
+Calendar Days
+Work Days
+Total Man-Days
+Include in Plan
 ```
 
 La séparation entrée/sortie est délibérée.
 
 ```text
-Saisie manuelle
+Manual Input
 A:G
     ↓
-Analyse automatique
+Automatic Analysis
 H:K
 ```
 
@@ -242,27 +242,27 @@ Pour un horizon standard de 12 mois, cela produit environ **52 à 53 périodes h
 Chaque semaine contient :
 
 ```text
-Indice de semaine
-Début de semaine
-Fin de semaine
-Mois
-Chantiers actifs
-Équipe affectée
-Capacité disponible
-Écart de capacité net
-Taux d'utilisation
-Statut de capacité
-Pénurie de dotation
+Week Index
+Week Start
+Week End
+Month
+Active Jobs
+Allocated Crew
+Available Capacity
+Net Capacity Gap
+Utilization
+Capacity Status
+Staffing Shortage
 ```
 
 La structure de décision hebdomadaire centrale est :
 
 ```text
-                  Équipe affectée
+                  Allocated Crew
                          │
                          ▼
                 ┌─────────────────┐
-                │ Comparaison de capacité│
+                │ Capacity Compare│
                 └────────┬────────┘
                          │
           ┌──────────────┼──────────────┐
@@ -309,11 +309,11 @@ Une semaine contenant 4 + 5 + 3 peintres requiert 12 peintres contre une capacit
 La décision devient explicite :
 
 ```text
-Demande     = 12 peintres
-Capacité    = 11 peintres
-Pénurie     = 1 peintre
-Utilisation = 109,1 %
-Statut      = OVERLOAD
+Demand      = 12 painters
+Capacity    = 11 painters
+Shortage    = 1 painter
+Utilization = 109.1%
+Status      = OVERLOAD
 ```
 
 L'entrepreneur peut désormais déplacer un chantier de priorité inférieure ou sécuriser un peintre externe avant que le conflit ne se produise.
@@ -324,17 +324,17 @@ L'entrepreneur peut désormais déplacer un chantier de priorité inférieure ou
 Le chevauchement hebdomadaire repose sur la question de savoir si l'intervalle du projet croise l'intervalle hebdomadaire :
 
 ```text
-Début du chantier ≤ Fin de semaine
-ET
-Fin du chantier ≥ Début de semaine
+Job Start ≤ Week End
+AND
+Job End ≥ Week Start
 ```
 
 L'équipe hebdomadaire affectée est alors la somme des exigences en équipes pour les chantiers satisfaisant cette condition de chevauchement.
 
 ```text
-Équipe affectée
+Allocated Crew
 =
-SOMME(Peintres requis × EstActif)
+SUM(Crew Required × IsActive)
 ```
 
 </details>
@@ -364,12 +364,12 @@ Séparer l'utilisation au niveau d'avertissement du dépassement réel de capaci
 **6. Résultat corrigé**
 
 ```text
-Demande     = 11
-Capacité    = 11
-Écart       = 0
-Utilisation = 100 %
-Pénurie     = 0
-Statut      = FULL
+Demand      = 11
+Capacity    = 11
+Gap         = 0
+Utilization = 100%
+Shortage    = 0
+Status      = FULL
 ```
 
 Ceci est un avertissement de gestion, pas automatiquement un besoin en personnel.
@@ -380,17 +380,17 @@ La distinction compte car l'action appropriée peut être de protéger le planni
 <summary>Logique des formules</summary>
 
 ```text
-Écart de capacité net
+Net Capacity Gap
 =
-Capacité disponible - Équipe affectée
+Available Capacity - Allocated Crew
 
-Taux d'utilisation
+Utilization
 =
-Équipe affectée / Capacité disponible
+Allocated Crew / Available Capacity
 
-Pénurie de dotation
+Staffing Shortage
 =
-MAX(0, Équipe affectée - Capacité disponible)
+MAX(0, Allocated Crew - Available Capacity)
 ```
 
 La pénurie reste nulle lorsque la demande égale exactement la capacité.
@@ -424,13 +424,13 @@ Un projet de deux peintres peut s'inscrire dans une semaine ouverte mais pas dan
 Au lieu de demander :
 
 ```text
-« Avons-nous de la capacité de réserve ce mois-ci ? »
+"Do we have spare capacity this month?"
 ```
 
 la question opérationnelle devient :
 
 ```text
-« Quelles semaines précises peuvent absorber ce besoin en équipes ? »
+"Which specific weeks can absorb this crew requirement?"
 ```
 
 Cette distinction transforme la capacité inutilisée en donnée de planification plutôt qu'en vague hypothèse commerciale.
@@ -441,11 +441,11 @@ Cette distinction transforme la capacité inutilisée en donnée de planificatio
 Le signal de capacité est dérivé de :
 
 ```text
-Capacité disponible
+Available Capacity
 -
-Équipe affectée
+Allocated Crew
 =
-Écart de capacité net
+Net Capacity Gap
 ```
 
 Les valeurs positives identifient la capacité d'équipe disponible.
@@ -485,17 +485,17 @@ La chronologie montre également que la surcharge est causée par trois chantier
 Si J-26-003 se déplace au-delà de la fenêtre de conflit du 21 au 27 septembre, la demande tombe de 12 à 9 peintres :
 
 ```text
-À l'origine :
-4 + 5 + 3 = 12 peintres
-12 / 11 = 109,1 %
+Original:
+4 + 5 + 3 = 12 painters
+12 / 11 = 109.1%
 OVERLOAD
 ```
 
 Après replanification :
 
 ```text
-4 + 5 = 9 peintres
-9 / 11 = 81,8 %
+4 + 5 = 9 painters
+9 / 11 = 81.8%
 OPEN
 ```
 
@@ -543,7 +543,7 @@ Convertit l'effectif de l'équipe et les jours ouvrables normaux en une capacit�
 Pour une équipe de 11 peintres travaillant cinq jours :
 
 ```text
-11 × 5 = 55 hommes-jours/semaine
+11 × 5 = 55 man-days/week
 ```
 
 </details>
@@ -635,9 +635,9 @@ Crée la limite inclusive du dimanche pour chaque semaine de planification.
 #### Logique de chevauchement chantier/semaine
 
 ```text
-Date de début du chantier <= Date de fin de semaine
-ET
-Date de fin du chantier >= Date de début de semaine
+Job Start Date <= Week End Date
+AND
+Job End Date >= Week Start Date
 ```
 
 Objectif :
@@ -651,18 +651,18 @@ Cela évite de s'appuyer uniquement sur la date de début du chantier et capture
 Conceptuellement :
 
 ```text
-Équipe affectée
+Allocated Crew
 =
-SOMME des peintres requis
-pour tous les chantiers valides chevauchant la semaine
+SUM of Painters Required
+for all valid jobs overlapping the week
 ```
 
 #### Écart de capacité
 
 ```text
-Écart de capacité
+Capacity Gap
 =
-Capacité disponible - Équipe affectée
+Available Capacity - Allocated Crew
 ```
 
 Les valeurs positives représentent la capacité inutilisée.
@@ -672,17 +672,17 @@ Les valeurs négatives représentent une pénurie.
 #### Taux d'utilisation
 
 ```text
-Taux d'utilisation
+Utilization
 =
-Équipe affectée / Capacité disponible
+Allocated Crew / Available Capacity
 ```
 
 #### Pénurie de dotation
 
 ```text
-Pénurie de dotation
+Staffing Shortage
 =
-MAX(0, Équipe affectée - Capacité disponible)
+MAX(0, Allocated Crew - Available Capacity)
 ```
 
 Cela convertit une surcharge en une quantité concrète de dotation.
