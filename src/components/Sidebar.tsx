@@ -97,23 +97,23 @@ export const Sidebar: React.FC<SidebarProps> = ({
       <div>
         {/* Brand Identity Header */}
         <div className="p-5 border-b border-gray-100 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded bg-[#051C2C] flex items-center justify-center text-white font-bold text-base shadow-sm">
-              11
+          <div className="flex items-center gap-3 min-w-0">
+            <div className="w-9 h-9 rounded bg-[#051C2C] flex items-center justify-center text-white font-bold text-xs shadow-sm shrink-0 tracking-wider">
+              TW
             </div>
-            <div>
-              <h1 className="garamond text-lg font-bold text-[#051C2C] tracking-tight leading-none">
-                Painter Crew
+            <div className="min-w-0">
+              <h1 className="garamond text-base font-bold text-[#051C2C] tracking-tight leading-tight truncate">
+                Theseus Workshop
               </h1>
-              <span className="text-[11px] text-[#888888] font-medium tracking-wide">
-                52-Week Capacity Console
+              <span className="text-[11px] text-[#888888] font-medium tracking-wide block truncate">
+                Painter Crew Capacity & Scheduling
               </span>
             </div>
           </div>
           {/* Mobile Close Button */}
           <button
             onClick={() => setMobileOpen(false)}
-            className="p-1.5 rounded text-[#888888] hover:text-[#051C2C] hover:bg-gray-100 lg:hidden cursor-pointer"
+            className="p-1.5 rounded text-[#888888] hover:text-[#051C2C] hover:bg-gray-100 lg:hidden cursor-pointer shrink-0 ml-1"
           >
             <X className="w-5 h-5" />
           </button>
@@ -266,21 +266,26 @@ export const Sidebar: React.FC<SidebarProps> = ({
     <>
       {/* Mobile Top Header Bar (< lg) */}
       <header className="lg:hidden sticky top-0 z-40 h-[52px] bg-white border-b border-gray-200 flex items-center justify-between px-4">
-        <div className="flex items-center gap-2.5">
+        <div className="flex items-center gap-2.5 min-w-0">
           <button
             onClick={() => setMobileOpen(true)}
-            className="p-1.5 rounded text-[#051C2C] hover:bg-gray-100 cursor-pointer"
+            className="p-1.5 rounded text-[#051C2C] hover:bg-gray-100 cursor-pointer shrink-0"
             aria-label="Open Navigation Menu"
           >
             <Menu className="w-5 h-5" />
           </button>
-          <div className="flex items-center gap-2">
-            <div className="w-7 h-7 rounded bg-[#051C2C] flex items-center justify-center text-white font-bold text-xs">
-              11
+          <div className="flex items-center gap-2 min-w-0">
+            <div className="w-7 h-7 rounded bg-[#051C2C] flex items-center justify-center text-white font-bold text-[10px] shrink-0 tracking-wider">
+              TW
             </div>
-            <span className="garamond font-bold text-base text-[#051C2C]">
-              Painter Crew
-            </span>
+            <div className="min-w-0">
+              <span className="garamond font-bold text-sm text-[#051C2C] block truncate leading-tight">
+                Theseus Workshop
+              </span>
+              <span className="text-[10px] text-[#888888] font-medium block truncate leading-none">
+                Painter Crew Capacity & Scheduling
+              </span>
+            </div>
           </div>
         </div>
 
