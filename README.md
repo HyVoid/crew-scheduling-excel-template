@@ -27,6 +27,14 @@ Looking for a reliable **painting contractor capacity planning template**? This 
 | **Complex schedule conflict resolution** | Pinpoint which specific projects overlap during a capacity conflict, allowing you to evaluate schedule shifts or subcontractor hiring against actual workload. |
 | **Reactive workforce management** | Discover where the next capacity problem occurs early, giving management a wider action window for hiring or resource leveling. |
 
+## Spreadsheet Preview
+
+Want to take a closer look before downloading? You can preview the spreadsheet in Google Sheets to explore its layout, structure, and calculation logic.
+
+**[View Spreadsheet Preview on Google Sheets](https://docs.google.com/spreadsheets/d/1O1LRRhelDOB5MMzC_t3Nohi3eBwg-uo1/edit?usp=sharing&ouid=108770714531989318327&rtpof=true&sd=true)**
+
+> **Note on Compatibility:** The Google Sheets preview may display occasional `#NAME?` errors or formula warnings due to differences between Google Sheets and Microsoft Excel formula compatibility. These are preview-only compatibility issues and do not affect the functionality of the original Excel workbook. For the intended formula behavior and full functionality, please download and open the `.xlsx` file in Microsoft Excel.
+
 ## Quick Start Workflow: How to Optimize Your Crew Schedule
 Follow this step-by-step tutorial to generate your first capacity forecast.
 
