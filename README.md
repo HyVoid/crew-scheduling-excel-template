@@ -93,6 +93,19 @@ This tool is engineered for small-to-medium painting contractors, field-service 
 
 *(Note: This is not intended to replace detailed daily dispatching, payroll, or granular construction estimating software. It focuses strictly on macro-level crew capacity over a 12-month horizon.)*
 
+
+## Questions, Feedback & Product Updates
+
+This toolkit is designed around practical painting contractor crew capacity, weekly job overlaps and staffing gaps workflows. Feedback helps identify unclear assumptions, missing scenarios, calculation issues, and improvements to the decision process.
+
+- **Questions & workflow fit:** [Ask about project date changes, job overlaps, painter requirements, baseline crew size, weekly capacity, OPEN/FULL/OVERLOAD states, staffing lead time, or schedule conflict handling](https://github.com/HyVoid/business-decision-toolbox/discussions/categories/questions).
+- **Ideas & improvements:** [Suggest additional job statuses, resource constraints, holiday/weather assumptions, subcontractor capacity, schedule views, or staffing reports](https://github.com/HyVoid/business-decision-toolbox/discussions/categories/ideas).
+- **Report a technical problem:** [Open the crew-scheduling-excel-template issue form](https://github.com/HyVoid/crew-scheduling-excel-template/issues/new?template=bug-report.yml).
+- **Product updates:** [Follow maintenance and improvement notes](https://github.com/HyVoid/business-decision-toolbox/discussions/categories/product-updates).
+
+Do not post employee names, personal contact details, payroll or HR records, customer names, private site addresses, contract documents, or unpublished project schedules. Use synthetic job IDs, dates, crew counts, and locations.
+Use the smallest reproducible example possible. Include the relevant worksheet, input field, date or scenario, and expected versus actual result. Browser demos and spreadsheet previews should be described separately from the downloadable Excel workbook when reporting an environment-specific issue.
+
 ---
 
 ## About
